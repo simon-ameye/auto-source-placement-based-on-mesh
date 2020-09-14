@@ -101,6 +101,7 @@ for obj_name in s.object_names:
         obj["render mode"] = "invisible"
         source = s.create_object("Area source")
         source["inflow unit"] = "volumeFlowRate"
+        source["volume flow rate"] = flow_rates[i]
         ressource = obj.get_connected_objects("MeshResource", 0)
         ressource = ressource[0]
         meshpath = ressource["mesh file"]
